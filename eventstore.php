@@ -11,7 +11,10 @@ use Prooph\EventStore\Async\EventAppearedOnSubscription;
 use Prooph\EventStore\Async\EventStoreCatchUpSubscription;
 use Prooph\EventStore\CatchUpSubscriptionSettings;
 use Prooph\EventStore\EndPoint;
+use Prooph\EventStore\EventData;
+use Prooph\EventStore\EventId;
 use Prooph\EventStore\EventStoreSubscription;
+use Prooph\EventStore\ExpectedVersion;
 use Prooph\EventStore\ResolvedEvent;
 use Prooph\EventStore\SubscriptionDropped;
 use Prooph\EventStore\SubscriptionDropReason;
@@ -32,6 +35,26 @@ Loop::run(function () {
 		echo 'connection closed' . PHP_EOL;
 	});
 	yield $connection->connectAsync();
+
+	// Create a few events
+	$connection->appendToStreamAsync('Foo-' . (string)time(), ExpectedVersion::ANY,
+		[
+			new EventData(
+				EventId::generate(),
+				'Foo.created',
+				true,
+				json_encode(['test' => 'test']),
+				json_encode(['test' => 'test'])
+			),
+			new EventData(
+				EventId::generate(),
+				'Foo.somethingElse',
+				true,
+				json_encode(['test' => 'test2']),
+				json_encode(['test' => 'test2'])
+			)
+		]
+	);
 
 	$settings = new CatchUpSubscriptionSettings(
 		50,
