@@ -2,8 +2,7 @@
   "name": "burzum/event-store-test",
   "authors": [
     {
-      "name": "Florian Krämer",
-      "email": "florian.kraemer@kreative-design.net"
+      "name": "Florian Krämer"
     }
   ],
   "require": {
