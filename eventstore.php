@@ -65,7 +65,7 @@ Loop::run(function () {
 	);
 
 	$subscription = yield $connection->subscribeToStreamFromAsync(
-		'$category-Foo',
+		'$ce-Foo',
 		0,
 		$settings,
 		new class() implements EventAppearedOnCatchupSubscription {
