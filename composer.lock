@@ -858,16 +858,16 @@
         },
         {
             "name": "google/protobuf",
-            "version": "v3.9.2",
+            "version": "v3.19.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "5159d2b6f11fe86ea1b8fca5a5d5c42cb0c93b1e"
+                "reference": "6f0a54186f133aff98f49d0f36a32d4a4f7d4cbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/5159d2b6f11fe86ea1b8fca5a5d5c42cb0c93b1e",
-                "reference": "5159d2b6f11fe86ea1b8fca5a5d5c42cb0c93b1e",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/6f0a54186f133aff98f49d0f36a32d4a4f7d4cbd",
+                "reference": "6f0a54186f133aff98f49d0f36a32d4a4f7d4cbd",
                 "shasum": ""
             },
             "require": {
@@ -895,7 +895,11 @@
             "keywords": [
                 "proto"
             ],
-            "time": "2019-09-23T17:53:18+00:00"
+            "support": {
+                "issues": "https://github.com/protocolbuffers/protobuf-php/issues",
+                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v3.19.4"
+            },
+            "time": "2022-01-28T17:23:32+00:00"
         },
         {
             "name": "kelunik/certificate",
@@ -1751,16 +1755,16 @@
     "packages-dev": [],
     "aliases": [
         {
-            "alias": "v8.0.0-RC-1",
-            "alias_normalized": "8.0.0.0-RC1",
+            "package": "prooph/event-store",
             "version": "9999999-dev",
-            "package": "prooph/event-store"
+            "alias": "v8.0.0-RC-1",
+            "alias_normalized": "8.0.0.0-RC1"
         },
         {
-            "alias": "1.0",
-            "alias_normalized": "1.0.0.0",
+            "package": "prooph/event-store-client",
             "version": "9999999-dev",
-            "package": "prooph/event-store-client"
+            "alias": "1.0",
+            "alias_normalized": "1.0.0.0"
         }
     ],
     "minimum-stability": "stable",
@@ -1772,5 +1776,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
 }
